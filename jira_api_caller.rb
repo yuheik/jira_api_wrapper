@@ -2,13 +2,13 @@
 
 require 'json'
 require 'benchmark'
-require_relative './api_caller'
+require_relative './api_caller_restclient'
 require_relative './credentials.rb'
 require_relative './jira'
 
 SeachType = :parallel           # or :sequence
 
-class JiraApiCaller < ApiCaller
+class JiraApiCaller < ApiCallerRestClient
   JIRA_URL = "#{Credentials::Site}/rest/api/2"
   INITIAL_SEARCH_SIZE = 1
   MAX_SEARCH_RESULTS  = 5
