@@ -1,8 +1,5 @@
 # coding: utf-8
 
-require './lib/my_ruby_utils/my_ruby_utils'
-include MyRubyUtils
-
 module Jira
   # TODO IssueType definition depends on the Site
   Types = [
