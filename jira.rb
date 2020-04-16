@@ -112,6 +112,10 @@ module Jira
       @epic               = fields["customfield_10014"]
     end
 
+    def inspect
+      "[#{@key}] #{@title} - #{@epic} (#{@story_points})"
+    end
+
     def get_subtask_keys(json)
       json.map { |subtask_json| subtask_json["key"] }
     end
